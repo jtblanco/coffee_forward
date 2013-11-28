@@ -1,2 +1,27 @@
-<h1>Gifts#index</h1>
-<p>Find me in app/views/gifts/index.html.erb</p>
+<div class="row">
+	<div class="span2">
+		<img src="/assets/beans.jpg" width="144" height="144" class="img-circle"/>
+	</div>
+	    <div class="span5">
+			<H1>
+				JT
+			<H1/>
+			<P class="lead">
+				<i class="icon-gift"></i>
+				Capuccino, with a shot of scotch.
+			</p>
+	</div>
+</div>
+
+<div class='row form-row'>
+	<div class='span8'>
+      <h4>
+      	Give a Coffee to Vince:
+      <h4/>
+      <%= form_for Gift.new, :html => { :class => "form-inline" } do |f| %>
+      <%= f.text_field :from, :class => "input-small", :placeholder => "from" %>
+      <%= f.text_field :message, :class => "input-small", :placeholder => "message" %>
+      <%= f.submit "Give Coffee", :class => "btn-success btn-large btn" %>
+      <% end %> 
+	</div>
+</div>		
